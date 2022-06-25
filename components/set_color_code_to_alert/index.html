@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set color code for box alert</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</head>
+<style>
+
+body, html{
+	height: 100%;
+	width: 100%;
+}
+
+.content-center{
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.addedValue{
+    animation-name: hideElem;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    color: #000;
+    border: 1px solid #000;
+    font-weight: 600;
+    margin: 1rem 0;
+    transition: all linear 0.2s;
+    background: #fff;
+}
+
+@keyframes hideElem{
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.selectOption{
+  gap: 1rem;
+}
+.notify{
+    position: fixed;
+    right: 10px;
+    top: 0;
+}
+.error{
+  color: red;
+}
+</style>
+
+
+<body>
+
+
+
+<div class="container">
+
+    <div class="card w-25 mx-auto mt-5">
+        <div class="card-body">
+            <div class="selectOption">
+                <div class="form-group">
+                    <h6 class="card-title pb-2">Set color code for box alert</h6>
+                    <input type="text" class="form-control" placeholder="Type color code" name="name" id="typeVal"  style="outline: none">
+                    <small class="error d-block"></small>
+                    <small class="text-muted d-block">(examples: #f02353, blue)</small>
+                </div>
+                <select id="selectOpt" class="form-control">
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+                <div class="notify"></div>
+                <div class="text-center">
+                    <input type="submit" name="submit" id="inputSub" onclick="submitVal()" class="btn btn-primary mt-3">
+                </div>
+            </div>    
+        </div>
+    </div>
+        
+</div>
+    
+
+
+<script src="../assets/js/jQuery.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

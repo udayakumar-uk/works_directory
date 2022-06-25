@@ -1,0 +1,362 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --black: #222;
+}
+.zohoexbold{ font-family: 'ZohoPuviExBold'; }
+.zohobold{ font-family: 'ZohoPuviBold'; }
+.zohoboldit{ font-family: 'ZohoPuviBoldIt'; }
+.zohosboldit{ font-family: 'ZohoPuviSemiBoldIt'; }
+.zohosemibold{ font-family: 'ZohoPuviSemiBold'; }
+.zohomed{ font-family: 'ZohoPuviMed'; }
+.zohoReg{ font-family: 'ZohoPuviReg'; }
+*{margin: 0;padding: 0; box-sizing: border-box;}
+body, html{font-family: 'ZohoPuviReg'; -ms-text-size-adjust: 100%; background-color: #f0f4f8; -webkit-text-size-adjust: 100%; line-height: 1.7; font-size:14px;color:#333; scroll-behavior: smooth; }
+p{font-size:1rem; margin: 0 0 1rem}
+a{color: #333;outline:none;display: inline-block;transition: all linear 0.5s;-webkit-transition: all linear 0.5s;-o-transition: all linear 0.5s; text-decoration: none;}
+a:hover, a:focus{color:#ea3434;}
+h1,h2,h3,h4,h5,h6{margin:0 0 1rem} 
+h1{font-size: 32px;font-weight: 800;}
+h2{font-size: 29px;font-weight: 700;}
+h3{font-size: 26px;font-weight: 600;}
+h4{font-size: 23px;font-weight: 600;}
+h5{font-size: 20px;font-weight: 500;}
+h6{font-size: 16px;font-weight: 400;}
+.clear-all{clear:both;height:0px;width:100%;text-indent:-100000px;padding: 0px; margin: 0px;}
+.clr:after{ display: block; content: ""; clear: both; }
+img{ max-width: 100%; vertical-align: middle;}
+ul{ list-style-type: none; margin: 0;padding: 0;}
+.btn{display: inline-block; padding: 0.6rem 2.5rem;border-radius: 4px;-webkit-border-radius: 4px;cursor: pointer;border: 0}
+.red-btn{ color: #ffff;background-color: #ea3434;}
+.blue-btn{ color: #ffff;background-color: #191a4b; padding: 1rem 2rem}
+.trans-btn{ color: #fff;background-color: transparent; border: 2px solid #fff;}
+.d-flex{display: flex;}
+.justify-center: {justify-content: center;}
+.align-center: {align-items: center;}
+.d-grid{display: grid;}
+.gridtemp-col-2{grid-template-columns: auto auto}
+.gridtemp-col-3{grid-template-columns: auto auto auto}
+.gridtemp-col-4{grid-template-columns: auto auto auto auto}
+.width-90{width: 90%;}
+.width-80{width: 80%;}
+.width-75{width: 75%;}
+.width-50{width: 50%;}
+.width-25{width: 25%;}
+.width-0{width: 0%;}
+.margin0auto{margin: 0 auto;}
+.ml-auto{margin-left: auto;}
+.mr-auto{margin-right: auto;}
+.p1rem{ padding: 1rem 0}
+.p2rem{ padding: 2rem 0}
+.p3rem{ padding: 3rem 0}
+.p4rem{ padding: 4rem 0}
+.p5rem{ padding: 5rem 0}
+.p0{padding: 0}
+.m1rem{ margin: 1rem 0;}
+.m2rem{ margin: 2rem 0;}
+.m3rem{ margin: 3rem 0;}
+.m4rem{ margin: 4rem 0;}
+.m5rem{ margin: 5rem 0;}
+.m0{margin: 0}
+.text-red{color: #ff7859;}
+.float-left{float: left;}
+.float-right{float: right;}
+.bg-primary{background-color: #5658d4;}
+.text-primary{color: #5658d4;}
+.text-yellow{color: #ffd554;}
+.text-white{color: #fff;}
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align:right;}
+/*header*/
+.head-nav ul li .menu{
+	padding: 0.6rem 1rem;
+}
+
+header{
+	font-family: 'ZohoPuviMed';
+	font-size: 1.2rem;
+}
+
+.banner-section {
+	padding: 3rem 3.5rem;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 20px 0px #00000026;
+    -webkit-box-shadow: 0px 5px 20px 0px #00000026;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.banner-section .banner-title p{
+	padding: 0.5rem 1rem;
+	border-radius: 0px 10px 10px 10px;
+	-webkit-border-radius: 0 10px 10px 10px;
+	display: inline-block;
+	margin: 0;
+	color: var(--white);
+	letter-spacing: 0.5px;
+}
+
+.banner-bg{
+	margin-top: 2rem  ;
+	background: url(../images/banner-bg.png) no-repeat 0 -200px ;
+	background-size: cover;
+}
+
+
+.banner-section .banner-icons{
+	grid-gap: 0 3rem;
+}
+.banner-section .banner-icons .items{
+	position: relative;
+}
+.banner-section .banner-icons .items:before{
+	width: 150px;
+	height: 120px;
+	content: '';
+	clear: both;
+	display: inline-block;
+	position: absolute;
+	top: 20px;
+	left: -60px;
+	background: url('../images/banner-icons.png') no-repeat 0 0 ;
+}
+.banner-section .banner-icons .items p{
+	padding-top: 130px;
+	margin: 0;
+	font-size: 16px;
+	font-family: 'ZohoPuviMed';
+}
+.banner-section .banner-icons .items.item2:before{
+	background-position: -180px 0; 
+}
+.banner-section .banner-icons .items.item3:before{
+	background-position: -360px 0; 
+}
+.banner-section .banner-icons .items.item4:before{
+	background-position: -540px 0; 
+}
+.openMenu, .closebtn{
+	display: none;
+}
+
+.openMenu{
+	position: absolute;
+	top: 40px;
+	right: 10%;
+}
+/**/
+
+.attckmatrix-section .grid-items{
+	grid-gap: 3.5rem;
+	position: relative;
+	z-index: 0;
+}
+.attckmatrix-section .grid-items:before{
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	border: 20px solid #ff7859;
+	display: block;
+	top: 50%;
+	left: 50%;
+    transform: translate(-60%, -55%);
+    -webkit-transform: translate(-60%, -55%);
+	position: absolute;
+	content: '';
+	clear: both;
+	background: url(../images/circle.png)no-repeat 0 0;
+}
+.attckmatrix-section .grid-items .card{
+	border: 1px solid #fff;
+	padding: 2rem;
+	background-color: #ebf7fb2e;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	display: grid;
+	align-items: center;
+	box-shadow: 0px 0px 16px #0000001c;
+	-webkit-box-shadow: 0px 0px 16px #0000001c;
+}
+.attckmatrix-section .grid-items .card p, .attckmatrix-section .grid-items .card h3{
+	margin: 0;
+}
+.attckmatrix-section .grid-items .card h3{
+	color: #ff7859;	
+}
+
+
+.mitreattckmatrix-section .iconscontent{
+	grid-gap: 1rem 2rem;
+}
+.mitreattckmatrix-section .iconscontent .icon-img{
+	padding-bottom: 1rem;
+}
+
+/**/
+
+
+.attck-slider {
+	background-color: #5658d4;
+	color: #fff;
+}
+
+
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+
+
+.attck-slider .sourcecontent {
+    padding: 2rem 0rem;
+    border: 1px solid #ffffff52;
+    border-radius: 10px;
+}
+
+.slick-dots{ 
+	padding-top: 1rem 
+}
+.slick-dots{
+	bottom: -40px;
+}
+.slick-dots li button:before{
+	font-size: 40px;
+	color: #fff;
+}
+
+.slick-dots li.slick-active button:before{
+	color: #fff;
+	opacity: 1
+}
+.slick-prev, .slick-next{
+	width: 50px;
+	height: 50px;
+	z-index: 2;
+}
+.slick-prev:before, .slick-next:before{
+	color: #fff;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ffffff52;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    background-color: #5b5ddb;
+}
+.slick-dotted.slick-slider{
+	    margin: 40px auto;
+}
+
+.slick-next{
+	right: 0px;
+}
+
+.slick-prev {
+    left: -5px;
+}
+
+footer .footer-section{
+	background-color: #363793;
+}
+
+
+/*responsive*/
+
+@media only screen and (max-width:991px) {
+	html, body{font-size: 12px;}
+	.width-80{
+		width: 90%;
+	}
+	.banner-section  .width-50{
+		width: 100%;
+		float: none;
+	}
+	.header-section ul{
+		display: block;
+	}
+	.openMenu, .closebtn{
+		display: block;
+	}
+	.head-nav ul li a{
+		display: block;
+		margin: 0 1rem;
+		text-align: center;
+	}
+
+/**/
+		.sidenav .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+
+		.sidenav {
+		  height: 100%;
+		  width: 0; 
+		  position: fixed;
+		  z-index: 1;
+		  left: 0;
+		  top: 0;
+		  background-color: #ffffffd9;
+		  overflow-x: hidden;
+		  padding-top: 60px; 
+		  transition: 0.5s;
+		  backdrop-filter: blur(7px);
+		  -webkit-backdrop-filter: blur(7px);
+		}
+}
+
+@media only screen and (max-width:767px) {
+	.d-grid{
+		display: block;
+	}
+	.attckmatrix-section .grid-items .card{
+		margin: 1rem 0;
+	}
+	.attckmatrix-section .grid-items:before{
+		display: none;
+	}
+}
+

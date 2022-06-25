@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Switch</title>
+</head>
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+  }
+  .checkbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    /* transform: translate(-50%, -50%); */
+    margin-top: -35px;
+    margin-left: -60px;
+  }
+    .checkbox label span{
+        vertical-align: super;
+    }
+  .checkbox label{
+    padding-left: 66px;
+    font-size: 3rem;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 900;
+    letter-spacing: 5px;
+    vertical-align: middle;
+    color: #000;
+  }
+  .checkbox label::before{
+    width: 140px;
+    height: 60px;
+    border-radius: 40px;
+    border: 1px solid #bbb;
+    content: '';
+    clear: both;
+    position: absolute;
+    left: 0px;
+    transition: all ease-in-out 0.2s;
+  }
+  .checkbox label::after{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #ed2f2f;
+    content: '';
+    clear: both;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    transition: all ease-in-out 0.2s;
+  }
+  .checkbox input:checked ~ label::after{
+    background-color: #18ab4b;
+  }
+  .checkbox input:checked ~ label::before{
+    left: -78px;
+  }
+  .checkbox label .on{
+    display: none;
+  }
+
+  .checkbox input:checked ~ label .on{
+    display: block;
+  }
+
+  .checkbox input:checked ~ label .off{
+    display: none;
+  }
+
+</style>
+
+<body>
+
+<div class="checkbox">
+    <input hidden type="checkbox" id="onoffToggle" value="off" />
+    <label for="onoffToggle">
+        <span class="off">FF</span>
+        <span class="on">N</span>
+    </label>
+</div>
+      
+    
+</body>
+</html>

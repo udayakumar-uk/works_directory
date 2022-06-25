@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatting APP</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+<div class="chatGroup">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12">
+                <div class="chatParent p-3 rounded">
+                    <h4 class="text-center">Chatting App</h4>
+                    <hr>
+                    <div class="row justify-content-between">
+                        <div class="col-md-3">
+                            <div class="chatLeft p-2 border rounded chatperson">
+                                <img src="https://imgur.com/7Lht9zY.png" alt="avatar">
+                                <h5>John Doe</h5>
+                                <small class="text-muted">UI UX Designer</small>
+                                <div class="chatinput">
+                                    <input class="my-2 border rounded-pill w-100 form-control chatInput" placeholder="Type here..." id="updateLeft">
+                                    <button class="btn btn-primary rounded-pill w-100" type="submit" id="sendLeftmsg" onclick="sendMsgFormLeft()">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border rounded chat-bg">
+                            <div class="chatmain py-3" id="chatCanvas"> </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="chatRight border p-2 rounded chatperson">
+                                <img src="https://www.flowmapp.com/uploads/6014806a31835aee14fe8e57_gender_boy_hair_hazelnut_head_no_hat_7129d79c1f.png" alt="avatar">
+                                <h5>Jack</h5>
+                                <small class="text-muted">Web Designer</small>
+                                <div class="chatinput">
+                                    <input class="my-2 border rounded-pill w-100 form-control chatInput" placeholder="Type here..." id="updateRight">
+                                    <button class="btn btn-primary rounded-pill w-100" type="submit" id="sendRightmsg" onclick="sendMsgFromRight()">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/jQuery.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
