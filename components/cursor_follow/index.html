@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor Follow</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body class="d-flex align-items-center justify-content-center vh-100">
+    
+<button type="button" class="cursor-container btn btn-primary position-relative" id="select">Hover me! </button>
+<span class="cursor-title position-absolute bg-dark p-1 px-2 text-white rounded"></span>
+
+
+<script>
+    let cursorContainer = document.getElementsByClassName('cursor-container')[0];
+    let cursorTitle = document.getElementsByClassName('cursor-title')[0];
+    cursorTitle.style.display = "none";
+    cursorTitle.innerText = "Tooltip content shown onHover";
+
+    cursorContainer.addEventListener('mousemove', function(e){
+        var cx = e.clientX, cy = e.clientY ;
+        var lx = e.layerX, ly = e.layerY ;
+        var ox = e.offsetX, oy = e.offsetY ;
+        var px = e.pageX, py = e.pageY ;
+        var sx = e.screenX, sy = e.screenY ;
+        var x = e.x, y = e.y ;
+
+        cursorTitle.style.display = "block";
+        cursorTitle.style.top = (y - 35) + 'px';
+        cursorTitle.style.left = (x + 5) + 'px';
+
+        console.log("-------------");
+        console.log("Client X,Y : " + cx, cy);
+        console.log("Layer X,Y : " + lx, ly);
+        console.log("Offset X,Y : " + ox, oy);
+        console.log("Page X,Y : " + px, py);
+        console.log("Screen X,Y : " + sx, sy);
+        console.log("Axis X,Y : " + x, y);
+
+    });
+    cursorContainer.addEventListener('mouseleave', function(){
+        cursorTitle.style.display = "none";
+    });
+
+</script>
+
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Active bar Animation</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <style>
 .tile {
@@ -71,9 +71,35 @@
     </div>
 </div>
 
-<script src="../assets/js/jQuery.min.js"></script>
-<script src="../assets/js/bootstrap.min.js"></script>
-<script src="index.js"></script>
+<script src="jQuery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+<script>
+	// tab ui
+	var ul = $(".nav-tabs");
+	var ulli = $(".nav-tabs .nav-item");
+	var ullia = $(".nav-tabs .nav-item a");
+	var slider = $(".nav-tabs .slider");
+
+	var actPosition = ul.find(".active").parent().position();
+	var actWidth = ul.find(".active").parent().width();
+	var calcLeft = actWidth / 2;
+	var sliderWidth = slider.width() / 2;
+	slider.css({
+		left: actPosition.left + calcLeft + -sliderWidth,
+		width: actWidth
+	});
+
+	ullia.click(function () {
+		var getPosition = $(this).parent().position();
+		var getWidth = $(this).parent().width();
+		slider.css({
+			left: getPosition.left + calcLeft + -sliderWidth,
+			width: getWidth
+		});
+	});
+
+</script>
 
 
 </body>
