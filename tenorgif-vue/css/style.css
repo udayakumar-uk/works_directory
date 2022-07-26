@@ -1,0 +1,248 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+  
+:root{
+    --dark: #0F0E1C;
+    --white: #fff;
+    --dulldark: #201b36;
+    --dullwhite: #ddd;
+    --lightgray: #ababab;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--dark);
+    color: var(--white);
+    font-size: 14px;
+}
+
+
+.gap1{
+    gap: 1rem;
+}
+.gap2{
+    gap: 2rem;
+}
+.gap3{
+    gap: 3rem;
+}
+
+header :is(.form-control, .input-group-prepend, .input-group-text),  .form-control:focus{
+    background-color: var(--dulldark);
+    border: 0;
+    box-shadow: none;
+}
+.form-control, .form-control:focus{
+    color: var(--white);
+}
+
+.gifBox {
+    overflow: hidden;
+    margin: 1rem 0;
+    box-shadow: 0px 15px 17px -5px #08080e;
+    -webkit-box-shadow: 0px 15px 17px -5px #08080e;
+    /* transition: 0.3s linear all; */
+    cursor: pointer;
+    height: 200px;
+    position: relative;
+    transition: all 300ms ease-out;
+    animation: float-up 500ms ease-out;
+}
+
+.gifBox:hover {
+    box-shadow: 0px 15px 20px -10px #000000;
+    -webkit-box-shadow: 0px 15px 20px -10px #000000;
+}
+
+
+@keyframes float-up {
+    
+    0% {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.gifBox label {
+    position: absolute;
+    line-height: 1.2;
+    top: -100px;
+    left: 0px;
+    padding: 5px;
+    margin: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 8px 8px 20px;
+    transition: 0.2s all linear;
+    -webkit-transition: 0.2s all linear;
+    font-weight: 600;
+    text-shadow: 0px 0px 3px #333;
+}
+
+
+.gifBox label::after {
+    content: '';
+    clear: both;
+    display: block;
+    width: 100%;
+    background: linear-gradient(0deg, rgb(133 133 133 / 0%) 20%, rgb(0 0 0 / 85%) 100%);
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+}
+
+.gifBox:hover label{
+    top: 0px;
+}
+
+
+.gifBox:hover {
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+}
+
+.gifBox img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.uibtn{
+    padding: 0.6rem 1.5rem;
+    display: inline-block;
+    margin: 1rem 0;
+    transition: all linear 0.1s;
+    -webkit-transition: all linear 0.1s;
+    box-shadow: none !important;
+    background: #504edf !important;
+    border-color: #504edf;
+    color: #fff !important;
+}
+.uibtn:active{
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+}
+
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+    background-color: var(--dark);
+}
+
+.trending-seciton .gifBox{
+    height: 110px;
+}
+
+.trending-seciton .slider .slick-arrow:before {
+    display: none;
+}
+.trending-seciton .slider .slick-arrow{
+    z-index: 9;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #09081a7a;
+    transition: all ease-in-out 0.3s;
+}
+
+
+.trending-seciton .slider .slick-prev{
+    left: -40px;
+}
+.trending-seciton .slider:hover .slick-prev{
+    left: 5px;
+}
+.trending-seciton .slider .slick-next{
+    right: -40px;
+}
+.trending-seciton .slider:hover .slick-next{
+    right: 5px;
+}
+
+
+.tenor-title h4{
+    font-size: 1.2rem;
+}
+
+.categoryList{
+    background-color: var(--dulldark);   
+}
+
+.categoryList ul li span:hover{
+    background-color: #ffffff1f;
+    cursor: pointer;
+}
+
+
+/* copy-btn */
+
+.copy-btn{
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    padding: 0;
+    color: #fff;
+    background: var(--dulldark);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 36px;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+}
+
+.gifBox:hover .copy-btn{
+    bottom: 5px;
+    right: 5px;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.copy-btn span{
+    font-size: 18px;
+    color: #fff;
+}
+
+button:hover[data-toggle="tooltip"]::before{
+    position: absolute;
+    bottom: 110%;
+    right: 0;
+    background-color: var(--dulldark);
+    color: #fff;
+    content: attr(title);
+    clear: both;
+    display: inline-block;
+    padding: 0 0.7rem;
+    border-radius: 50px;
+    line-height: 2;
+    font-size: 13px;
+    white-space: nowrap;
+}
